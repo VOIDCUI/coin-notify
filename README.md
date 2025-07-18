@@ -17,6 +17,8 @@
   - XRP/USDT
   - DOGE/USDT
   - ADA/USDT
+  - BNB/USDT
+  - 更多...
 
 ## 系统要求
 
@@ -28,7 +30,7 @@
 
 1. 克隆项目到本地：
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/VOIDCUI/coin-notify.git
 cd coin-notify
 ```
 
@@ -105,7 +107,7 @@ trading_pairs:  # 要监控的交易对列表
 
 # 通知配置
 notification:
-  enabled: true   # 是否启用系统通知（true/false）
+  enabled: false   # 是否启用系统通知（true/false）
   interval: 60    # 通知间隔（秒）
   icon: "图标URL" # 通知图标
 
@@ -154,8 +156,8 @@ websocket:
 
 ## 贡献指南
 
-欢迎提交 Issue 和 Pull Request 来帮助改进这个项目。
+欢迎提交 Issue 和 Pull Request 来帮助改进这个项目。详细信息请参考 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 ## 许可证
 
-MIT License 
+本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详细信息。 
