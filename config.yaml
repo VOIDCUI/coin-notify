@@ -8,6 +8,7 @@ trading_pairs:
   - DOGEUSDT   # 狗狗币
   - ADAUSDT    # 卡尔达诺
   - BNBUSDT    # 币安币
+  - FARTCOINUSDT
 
 # 通知配置
 notification:
