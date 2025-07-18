@@ -37,4 +37,5 @@ env/
 logs/
 
 # Local configuration
-.env 
+.env
+config.yaml  # 本地配置文件 

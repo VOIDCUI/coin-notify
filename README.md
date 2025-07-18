@@ -56,6 +56,20 @@ pip install -r requirements.txt
 sudo gem install terminal-notifier
 ```
 
+5. 创建本地配置文件：
+```bash
+# macOS/Linux:
+cp config.yaml.example config.yaml
+# Windows:
+copy config.yaml.example config.yaml
+```
+
+6. 根据需要修改配置文件 config.yaml：
+   - 添加或删除要监控的交易对
+   - 设置是否启用系统通知
+   - 调整通知间隔
+   - 自定义通知图标
+
 ## 使用方法
 
 1. 确保已激活虚拟环境：
@@ -87,7 +101,8 @@ python main.py
 coin-notify/
 ├── README.md           # 项目说明文档
 ├── requirements.txt    # 项目依赖
-├── config.yaml        # 配置文件
+├── config.yaml.example # 配置文件模板
+├── config.yaml        # 本地配置文件（需要自行创建）
 ├── main.py            # 主程序
 ├── notify.py          # 通知模块
 └── websocket.py       # WebSocket 连接模块
@@ -95,7 +110,7 @@ coin-notify/
 
 ## 配置文件说明
 
-项目使用 `config.yaml` 文件进行配置管理。您可以根据需要修改以下配置项：
+项目使用 `config.yaml` 文件进行配置管理。首次使用时需要从 `config.yaml.example` 创建自己的配置文件。您可以根据需要修改以下配置项：
 
 ```yaml
 # 交易对配置
@@ -122,6 +137,11 @@ websocket:
 - `interval`: 控制通知推送的时间间隔
 - `icon`: 通知图标的 URL
 
+### 本地配置注意事项
+- config.yaml 文件不会被提交到 Git 仓库
+- 每次更新代码后，注意对比 config.yaml.example 是否有新的配置项
+- 建议在修改配置前备份当前的 config.yaml
+
 ## 注意事项
 
 1. 确保网络连接稳定，以保证 WebSocket 连接的可靠性
@@ -147,12 +167,14 @@ websocket:
 3. 如果程序无法启动：
    - 确认是否已激活虚拟环境
    - 检查依赖是否安装完整
+   - 检查是否已创建并正确配置 config.yaml
    - 查看错误信息进行相应处理
 
 4. 如果配置文件有误：
    - 检查 YAML 格式是否正确
    - 确保所有必需的配置项都存在
    - 使用有效的交易对符号
+   - 可以参考 config.yaml.example 重新创建配置文件
 
 ## 贡献指南
 
