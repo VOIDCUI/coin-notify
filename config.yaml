@@ -1,0 +1,26 @@
+# 交易对配置
+# 支持添加任何 OKX 交易所支持的 USDT 交易对
+trading_pairs:
+  - BTCUSDT    # 比特币
+  - ETHUSDT    # 以太坊
+  - SOLUSDT    # 索拉纳
+  - XRPUSDT    # 瑞波币
+  - DOGEUSDT   # 狗狗币
+  - ADAUSDT    # 卡尔达诺
+  - BNBUSDT    # 币安币
+
+# 通知配置
+notification:
+  enabled: false  # 是否启用系统通知,默认为false
+  interval: 60    # 通知间隔（秒）
+  icon: "https://img.qlchat.com/qlLive/admin/BX31GN25-3MYD-77L3-1670913090514-FXIC2795ZRMI.JPG"
+
+# WebSocket配置
+websocket:
+  max_reconnect_attempts: 5    # 连接断开后的最大重试次数
+  reconnect_delay: 1          # 重连延迟（秒）
+
+# 注意：
+# 1. 添加新的交易对时，确保使用正确的符号格式（币种+USDT）
+# 2. 系统通知仅显示 BTC 和 ETH 的信息
+# 3. 所有配置修改后需要重启程序才能生效 
